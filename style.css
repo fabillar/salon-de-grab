@@ -80,7 +80,7 @@ header.solid::before, header.scrolled::before{
 header .wrap{ display:flex; align-items:center; justify-content:space-between; }
 
 .brand{ display:flex; flex-direction:column; line-height:1; }
-.brand .name{ font-family:'Fraunces', serif; font-size:1.3rem; letter-spacing:0.03em; color:var(--ink); position:relative; }
+.brand .name{ font-family:'Tangerine', cursive; font-weight:700; font-size:2.6rem; letter-spacing:0.03em; color:var(--ink); position:relative; }
 .brand .name::after{
   content:''; position:absolute; left:0; bottom:-6px; width:26px; height:3px; background:var(--wine); border-radius:2px;
 }
