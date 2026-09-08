@@ -32,3 +32,12 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// scroll to top button
+const toTop = document.getElementById('toTop');
+if (toTop) {
+  const toggleToTop = () => toTop.classList.toggle('visible', window.scrollY > 480);
+  document.addEventListener('scroll', toggleToTop, { passive:true });
+  toggleToTop();
+  toTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+}
