@@ -80,7 +80,7 @@ header.solid::before, header.scrolled::before{
 header .wrap{ display:flex; align-items:center; justify-content:space-between; }
 
 .brand{ display:flex; flex-direction:column; line-height:1; }
-.brand .name{ font-family:'Tangerine', cursive; font-weight:700; font-size:2.6rem; letter-spacing:0.03em; color:var(--ink); position:relative; }
+.brand .name{ font-family:'Parisienne', cursive; font-weight:400; font-size:2.15rem; letter-spacing:0.02em; color:var(--ink); position:relative; }
 .brand .name::after{
   content:''; position:absolute; left:0; bottom:-6px; width:26px; height:3px; background:var(--wine); border-radius:2px;
 }
@@ -136,6 +136,12 @@ nav.links a:not(.btn):hover::after{ width:100%; }
   background:
     linear-gradient(102deg, var(--bg) 0%, var(--bg) 27%, rgba(251,245,231,0.7) 46%, rgba(251,245,231,0.2) 65%, rgba(251,245,231,0.04) 100%),
     linear-gradient(0deg, var(--bg) 0%, rgba(251,245,231,0.02) 34%);
+}
+@media (max-width:820px){
+  .hero-media::before{
+    background:
+      linear-gradient(180deg, rgba(251,245,231,0) 0%, rgba(251,245,231,0.08) 45%, rgba(251,245,231,0.6) 78%, var(--bg) 100%);
+  }
 }
 .hero-swash{
   position:absolute; z-index:1; width:640px; height:640px; left:-220px; top:-160px;
