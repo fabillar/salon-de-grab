@@ -137,12 +137,6 @@ nav.links a:not(.btn):hover::after{ width:100%; }
     linear-gradient(102deg, var(--bg) 0%, var(--bg) 27%, rgba(251,245,231,0.7) 46%, rgba(251,245,231,0.2) 65%, rgba(251,245,231,0.04) 100%),
     linear-gradient(0deg, var(--bg) 0%, rgba(251,245,231,0.02) 34%);
 }
-@media (max-width:820px){
-  .hero-media::before{
-    background:
-      linear-gradient(180deg, rgba(251,245,231,0) 0%, rgba(251,245,231,0.08) 45%, rgba(251,245,231,0.6) 78%, var(--bg) 100%);
-  }
-}
 .hero-swash{
   position:absolute; z-index:1; width:640px; height:640px; left:-220px; top:-160px;
   border:1.5px solid var(--wine); border-radius:50%; opacity:0.35;
