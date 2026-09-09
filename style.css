@@ -80,7 +80,9 @@ header.solid::before, header.scrolled::before{
 header .wrap{ display:flex; align-items:center; justify-content:space-between; }
 
 .brand{ display:flex; flex-direction:column; line-height:1; }
-.brand .name{ font-family:'Parisienne', cursive; font-weight:400; font-size:2.15rem; letter-spacing:0.02em; color:var(--ink); position:relative; }
+.brand .name{
+  font-family:'Great Vibes', cursive; font-weight:400; font-size:2.15rem; letter-spacing:0.02em; color:var(--ink); position:relative;
+}
 .brand .name::after{
   content:''; position:absolute; left:0; bottom:-6px; width:26px; height:3px; background:var(--wine); border-radius:2px;
 }
@@ -406,8 +408,11 @@ footer .brand .sub{ color:var(--gold); }
     box-shadow:-16px 0 40px rgba(36,26,17,0.1);
   }
   nav.links.open{ transform:translateX(0); }
-  .menu-toggle{ display:flex; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; z-index:110; }
-  .menu-toggle span{ width:24px; height:1px; background:var(--ink); }
+  .menu-toggle{ display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; width:24px; height:24px; background:none; border:none; cursor:pointer; z-index:110; }
+  .menu-toggle span{ width:24px; height:1px; background:var(--ink); transition:transform .3s var(--ease), opacity .2s var(--ease); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
   .header-cta{ display:none; }
   .section-pad{ padding-top:88px; padding-bottom:88px; }
   .section-head{ flex-direction:column; align-items:flex-start; gap:16px; }
